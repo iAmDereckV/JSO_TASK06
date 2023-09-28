@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script>
+      var v1;
+      function abre() {
+        v1 = window.open("ab.htm", "v", "status=yes resizable=yes");
+        v1.status = "Ventana creada para publicidad";
+        status = "Ventana Estandar del Navegador";
+      }
+      function cierra() {
+        v1.close();
+      }
+    </script>
+  </head>
+  <body onload="abre();">
+    <input type="button" value="Cerrar" onClick="cierra();" />
+  </body>
+</html>

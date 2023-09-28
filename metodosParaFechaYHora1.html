@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script>
+      function fecha() {
+        var obj_fecha = new Date();
+        var completo = obj_fecha.toGMTString();
+        var hora = obj_fecha.getHours();
+        var minuto = obj_fecha.getMinutes();
+        var segundo = obj_fecha.getSeconds();
+        var dia = obj_fecha.getDate();
+        var mes = obj_fecha.getMonth() + 1;
+        var anis = obj_fecha.getYear();
+        alert(hora + ":" + minuto + ":" + segundo);
+        alert(dia + "/" + mes + "/" + anis);
+        alert(completo);
+      }
+    </script>
+  </head>
+  <body onLoad="fecha();"></body>
+</html>

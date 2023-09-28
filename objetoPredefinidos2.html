@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script>
+      var v1;
+      function abre() {
+        v1 = window.open("ab.htm", "v", "status=yes resizable=yes");
+      }
+      function opera(valor) {
+        switch (valor) {
+          case 1:
+            cargapagina();
+            break;
+          case 2:
+            print();
+            break;
+          case 3:
+            var modal;
+            modal = window.showModalDialog("ab2.htm");
+            break;
+        }
+      }
+      function cargapagina() {
+        var cerrada = v1.closed;
+        if (cerrada == false) v1.Location = "ab2.htm";
+        else alert("Error.\nv1 debe estar abierta.");
+      }
+    </script>
+  </head>
+  <body onload="abre();">
+    <input type="button" value="Cargar" onClick="opera(1);" />
+    <br />
+    <input type="button" value="Imprime" onClick="opera(2);" />
+    <br />
+    <input type="button" value="Modal" onClick="opera(3);" />
+  </body>
+</html>

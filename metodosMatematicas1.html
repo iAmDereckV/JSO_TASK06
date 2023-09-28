@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script>
+      function opera(valor) {
+        var resultado;
+        var num1 = parseInt(cnum1.value);
+        var num2 = parseInt(cnum2.value);
+        switch (valor) {
+          case 1:
+            resultado = Math.sqrt(Math.abs(num1));
+            break;
+          case 2:
+            resultado = Math.pow(num1, num2);
+            break;
+          case 3:
+            resultado = Math.max(num1, num2);
+            break;
+        }
+        resul.value = resultado;
+      }
+    </script>
+  </head>
+  <body>
+    NUM1:
+    <input type="text" id="cnum1" name="cnum1" size="5" value="0" />
+    <br />
+    NUM2:
+    <input type="text" id="cnum2" name="cnum2" size="5" value="0" />
+    <br />
+    <br />
+    <input type="button" value="Raiz" onClick="opera(1);" />
+    <input type="button" value="Potencia" onClick="opera(2);" />
+    <input type="button" value="Máximo" onClick="opera(3);" />
+    <br />
+    <br />
+    Resultado:<input type="text" id="resul" name="resul" size="17" />
+  </body>
+</html>

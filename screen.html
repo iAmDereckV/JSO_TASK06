@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script>
+      function resol() {
+        var ancho = screen.width;
+        var alto = screen.height;
+        if (ancho < 1800 && alto < 1600) {
+          alert("Aumentar Resolución a 1800x1600");
+          document.write("Aumente la Resolución");
+        }
+      }
+    </script>
+  </head>
+  <body onLoad="resol();"></body>
+</html>

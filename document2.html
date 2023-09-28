@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script>
+      var v1;
+      function ver() {
+        var fecha;
+        var urlantes;
+        var urlactual;
+        fecha = v1.document.lastModified;
+        urlantes = v1.document.referrer;
+        urlactual = v1.document.location;
+        v1.document.writeln("Creada en " + fecha);
+        v1.document.writeln("Dirección " + urlactual);
+        v1.document.write("Url anterior " + urlantes);
+      }
+      function abre() {
+        v1 = window.open("ab.htm", "v", "status=yes resizable=yes");
+      }
+    </script>
+  </head>
+  <body onLoad="crea();">
+    <input type="button" value="Info. Pag" onClick="ver();" />
+  </body>
+</html>

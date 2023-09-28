@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script>
+      var secreto;
+      function genera() {
+        secreto = Math.random() * 10;
+        secreto = Math.round(secreto);
+        if (secreto == 0) secreto = 10;
+      }
+      function juego() {
+        var numero = parseInt(caja.value);
+        if (numero == secreto) {
+          alert("Muy bien.\n A por otro");
+          genera();
+        } else {
+          if (numero < secreto) alert("Es mayor");
+          else alert("es menor");
+        }
+        caja.focus();
+        caja.value = "";
+      }
+    </script>
+  </head>
+  <body onLoad="genera();">
+    NUMERO:<input type="text" id="caja" name="caja" size="3" />
+    <input type="button" value="Compara" onClick="juego();" />
+  </body>
+</html>

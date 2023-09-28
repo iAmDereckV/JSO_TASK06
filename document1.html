@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script>
+      function fondo(colores) {
+        document.bgColor = colores;
+      }
+      function texto(colores) {
+        document.fgColor = colores;
+      }
+    </script>
+  </head>
+  <body>
+    COLOR DEL FONDO <br />
+    BLANCO <input type="radio" name="F" onClick="fondo('white');" />
+    <br />
+    ROJO <input type="radio" name="F" onClick="fondo('red');" />
+    <br />
+    AZUL <input type="radio" name="F" onClick="fondo('blue');" />
+    <br />
+    <br />
+    COLOR DEL TEXTO NEGRO
+    <input type="radio" name="T" onClick="texto('black');" />
+    <br />
+    GRIS <input type="radio" name="T" onClick="texto('gray');" />
+    <br />
+    VERDE <input type="radio" name="T" onClick="texto('green');" />
+  </body>
+</html>

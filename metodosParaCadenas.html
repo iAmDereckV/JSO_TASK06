@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script>
+      function pasa() {
+        var contra = T.value;
+        var nletras = contra.length;
+        if (nletras < 4) {
+          alert("Mínimo 4 letras");
+          T.value = "";
+          nletras = 0;
+        }
+        if (nletras != 0) {
+          contra = contra.toUpperCase();
+          alert("La primera es: " + contra.charAt(0));
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="password" id="T" name="T" size="9" onBlur="pasa();" />
+  </body>
+</html>
